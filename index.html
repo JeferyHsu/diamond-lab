@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080e19">
+  <meta name="description" content="Diamond Lab 棒球實驗室：用好懂的教學、互動數據工具，從零認識棒球。">
+  <title>Diamond Lab｜棒球知識與數據實驗室</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="data/articles.js"></script>
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <a href="index.html" class="brand" aria-label="Diamond Lab 首頁">
+        <span class="brand-symbol" aria-hidden="true">◇</span>
+        <span>DIAMOND<span class="brand-light">/LAB</span><small>BASEBALL KNOWLEDGE SYSTEM</small></span>
+      </a>
+      <nav class="topnav" aria-label="主要導覽">
+        <a href="#explore" data-nav="explore">知識庫</a>
+        <a href="#lab" data-nav="lab">數據實驗室</a>
+        <a href="#about" data-nav="about">關於本站</a>
+      </nav>
+      <span class="nav-status"><span class="pulse"></span> LIVE LEARNING</span>
+      <button id="menu-toggle" class="mobile-menu" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="開啟選單">☰</button>
+    </header>
+    <nav id="mobile-nav" class="mobile-nav" aria-label="手機導覽" hidden>
+      <a href="#explore">知識庫</a><a href="#lab">數據實驗室</a><a href="#about">關於本站</a>
+    </nav>
+    <main id="app">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-content">
+          <div class="eyebrow"><span class="signal"></span> THE GAME, DECODED <span class="dash"></span> EST. 2026</div>
+          <h1 id="hero-title">不只是看球，<br><em>更要讀懂棒球。</em></h1>
+          <p>從九局規則到進階打擊數據，把每一次揮棒、每一個決策，都變成看得懂的棒球知識。</p>
+          <div class="hero-actions"><a class="btn btn-primary" href="#explore">探索知識庫 <span>↗</span></a><a class="btn btn-ghost" href="#lab">開啟數據實驗室 <span>→</span></a></div>
+          <div class="hero-metrics"><div><strong id="article-count">08</strong><small>知識文章</small></div><i></i><div><strong>04</strong><small>打擊數據工具</small></div><i></i><div><strong>100<span>%</span></strong><small>免費學習</small></div></div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="visual-orbit orbit-one"></div><div class="visual-orbit orbit-two"></div>
+          <div class="visual-label label-top"><span>◉</span> FIELD OVERVIEW <small>FIG. 001</small></div>
+          <svg class="diamond-art" viewBox="0 0 480 480" role="img" aria-label="棒球場幾何線條圖">
+            <defs><linearGradient id="d-fill" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#123e37" stop-opacity=".8"/><stop offset="100%" stop-color="#0c2330" stop-opacity=".3"/></linearGradient></defs>
+            <path d="M240 49 L426 240 L240 426 L54 240 Z" fill="url(#d-fill)" stroke="#2c695f" stroke-width="1.4"/>
+            <path d="M240 91 L387 240 L240 387 L93 240 Z" fill="none" stroke="#275c58" stroke-width="1" stroke-dasharray="5 7"/>
+            <path d="M240 141 L339 240 L240 339 L141 240 Z" fill="#1c4542" stroke="#70e5be" stroke-width="2.5"/>
+            <path d="M240 239 L240 339 M141 240 L339 240" stroke="#3a8b77" stroke-width="1.2" stroke-dasharray="4 5"/>
+            <path d="M240 315 L263 339 L240 363 L216 339 Z" fill="#0a1721" stroke="#bafbe7" stroke-width="2"/>
+            <rect x="230" y="131" width="20" height="20" transform="rotate(45 240 141)" fill="#e4fff4"/>
+            <rect x="131" y="230" width="20" height="20" transform="rotate(45 141 240)" fill="#e4fff4"/>
+            <rect x="329" y="230" width="20" height="20" transform="rotate(45 339 240)" fill="#e4fff4"/>
+            <circle cx="240" cy="240" r="17" fill="#061a1d" stroke="#6ae8bf" stroke-width="2"/><circle cx="240" cy="240" r="5" fill="#7fffd0"/>
+            <path d="M240 363 V448 M54 240 H12 M426 240 H468" stroke="#2d615d" stroke-width="1"/>
+            <g fill="#7fffd0" font-size="10" font-family="monospace" letter-spacing="1"><text x="252" y="117">2B</text><text x="103" y="218">3B</text><text x="348" y="218">1B</text><text x="256" y="249">P</text><text x="252" y="390">HOME</text></g>
+          </svg>
+          <div class="visual-corner corner-tl"></div><div class="visual-corner corner-tr"></div><div class="visual-corner corner-bl"></div><div class="visual-corner corner-br"></div>
+          <div class="visual-label label-bottom">DIAMOND SYSTEM <span>01 / 09</span></div>
+        </div>
+      </section>
+      <section id="explore" class="content-section" aria-labelledby="explore-title">
+        <div class="section-heading"><div><div class="section-kicker">01 / KNOWLEDGE BASE</div><h2 id="explore-title">探索棒球知識<span class="period">.</span></h2><p>讓每個球場上的細節，都有一個清楚的答案。</p></div><span class="section-count" id="results-label">08 ARTICLES AVAILABLE</span></div>
+        <div class="toolbar"><div class="filter-list" id="category-filters" role="group" aria-label="文章分類"></div><label class="search-wrap"><span aria-hidden="true">⌕</span><input type="search" id="search-input" placeholder="搜尋主題、術語、數據..." autocomplete="off" aria-label="搜尋文章"><span class="search-key">/</span></label></div>
+        <div class="article-grid" id="article-grid" aria-live="polite"></div>
+        <div id="empty-state" class="empty-state" hidden>找不到符合條件的文章，試試其他關鍵字或分類。</div>
+      </section>
+      <section id="lab" class="content-section lab-section" aria-labelledby="lab-title">
+        <div class="section-heading"><div><div class="section-kicker">02 / INTERACTIVE TOOL</div><h2 id="lab-title">打擊數據實驗室<span class="period">.</span></h2><p>輸入一組打擊紀錄，讓數據幫你解讀球員表現。</p></div><span class="section-count">BATTING CALCULATOR / V1.0</span></div>
+        <div class="lab-layout"><form id="stats-form" class="lab-panel" novalidate><div class="panel-topline"><span><span class="indicator"></span> INPUT PARAMETERS</span><button id="reset-stats" class="subtle-button" type="button">↺ 重設</button></div><p class="form-intro">使用示範數據，或輸入自己的球員統計。</p><div class="form-grid">
+          <label>打數 <small>AB</small><input name="ab" id="ab" type="number" min="0" step="1" value="100" required></label>
+          <label>一壘安打 <small>1B</small><input name="single" id="single" type="number" min="0" step="1" value="18" required></label>
+          <label>二壘安打 <small>2B</small><input name="double" id="double" type="number" min="0" step="1" value="7" required></label>
+          <label>三壘安打 <small>3B</small><input name="triple" id="triple" type="number" min="0" step="1" value="1" required></label>
+          <label>全壘打 <small>HR</small><input name="hr" id="hr" type="number" min="0" step="1" value="4" required></label>
+          <label>四壞保送 <small>BB</small><input name="bb" id="bb" type="number" min="0" step="1" value="12" required></label>
+          <label>觸身球 <small>HBP</small><input name="hbp" id="hbp" type="number" min="0" step="1" value="2" required></label>
+          <label>犧牲飛球 <small>SF</small><input name="sf" id="sf" type="number" min="0" step="1" value="3" required></label>
+        </div><p class="validation" id="validation" role="alert" aria-live="assertive"></p><button class="btn btn-primary calculate" type="submit">計算打擊數據 <span>→</span></button></form>
+        <div class="results-panel"><div class="panel-topline"><span><span class="indicator"></span> LIVE METRICS</span><span class="result-version">CALCULATION OUTPUT</span></div><div class="result-grid">
+          <div class="metric-box"><span>打擊率 / AVG</span><strong id="val-avg">.300</strong><small>安打 ÷ 打數</small></div>
+          <div class="metric-box"><span>上壘率 / OBP</span><strong id="val-obp">.393</strong><small>(H + BB + HBP) ÷ (AB + BB + HBP + SF)</small></div>
+          <div class="metric-box"><span>長打率 / SLG</span><strong id="val-slg">.510</strong><small>總壘打數 ÷ 打數</small></div>
+          <div class="metric-box accent-metric"><span>攻擊指數 / OPS</span><strong id="val-ops">.903</strong><small>OBP + SLG</small></div>
+        </div><div class="result-foot"><span>◈</span> 數據僅為計算示範，不代表實際球員或賽事結果。</div></div></div>
+      </section>
+      <section id="about" class="about-section"><div><div class="section-kicker">03 / THE MISSION</div><h2>把棒球，變成一種<br><span>看得懂的語言。</span></h2></div><div><p>Diamond Lab 是一個持續成長的棒球知識專案，從基本規則、場上位置，到打擊與投手數據，使用一致的文章結構逐步擴充。</p><p>本網站使用純 HTML、CSS 與 JavaScript 建置，透過 <code>AGENTS.md</code> 規範新增內容的方式，方便 AI 與開發者持續維護。</p><a href="#explore" class="text-link">開始探索知識庫 ↗</a></div></section>
+    </main>
+    <footer class="footer"><div class="footer-brand"><span class="brand-symbol">◇</span> DIAMOND/LAB</div><span>BUILT FOR CURIOUS BASEBALL FANS.</span><span>© 2026 DIAMOND LAB · EDUCATIONAL PROJECT</span></footer>
+  </div>
+  <dialog id="article-dialog" class="article-dialog" aria-labelledby="dialog-title"><div class="dialog-top"><span>DIAMOND LAB / ARTICLE</span><button type="button" id="close-dialog" class="close-dialog" aria-label="關閉文章">✕</button></div><article id="dialog-content"></article></dialog>
+</body>
+</html>
